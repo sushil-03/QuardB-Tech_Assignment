@@ -34,9 +34,9 @@ export default function Home() {
     );
 
   return (
-    <div className="bg-black w-screen min-h-screen border-2 border-black text-white">
+    <div className="w-screen min-h-screen text-white bg-black border-2 border-black">
       <div className="">
-        <h1 className="mt-8 font-mono text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600">
+        <h1 className="mt-8 font-sans text-5xl font-extrabold text-center text-transparent bg-clip-text bg-rado bg-gradient-to-r from-stone-100 via-rose-600 to-yellow-100">
           QuardB Tech
         </h1>
         <div className="mx-8 mt-8">

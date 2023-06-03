@@ -46,16 +46,16 @@ const MovieDetail = () => {
     );
 
   return (
-    <div className="bg-black text-white min-h-screen overflow-hidden">
+    <div className="min-h-screen overflow-hidden text-white bg-black">
       <div>
-        <div className="flex justify-center items-center h-screen md:gap-20 sm:gap-12 gap-2">
-          <div className="w-1/2">
+        <div className="flex flex-col items-center justify-center h-screen gap-2 md:gap-20 sm:gap-12 sm:flex-row">
+          <div className="w-11/12 mx-auto sm:w-1/2">
             <Link to={data.officialSite}>
               <img src={data.image.original} alt="" />
             </Link>
           </div>
-          <div className="w-1/2 md:px-24 sm:px-12 px-2 flex-1 ">
-            <h1 className="md:text-5xl text-2xl font-mono font-extrabold">
+          <div className="flex-1 w-11/12 px-2 mx-auto md:px-24 sm:px-12 sm:w-1/2">
+            <h1 className="font-mono text-2xl font-extrabold md:text-5xl">
               {data.name}
             </h1>
             <div className="flex gap-4">
@@ -67,7 +67,7 @@ const MovieDetail = () => {
                 );
               })}
             </div>
-            <div className="font-mono mt-10 flex flex-col gap-2">
+            <div className="flex flex-col gap-2 mt-10 font-mono">
               <div>
                 <span> Rating</span>:{" "}
                 <span className="text-xl">{data.rating.average}</span>
@@ -90,7 +90,7 @@ const MovieDetail = () => {
               </div>
             </div>
             <div>
-              <h2 className="md:text-3xl text-xl font-mono font-bold mt-10">
+              <h2 className="mt-10 font-mono text-xl font-bold md:text-3xl">
                 Description
               </h2>
               <div id="summary" className="text-base text-gray-400"></div>
@@ -98,7 +98,7 @@ const MovieDetail = () => {
             </div>
             <div className="mt-6">
               <button
-                className="px-5 py-4 bg-red-500 hover:bg-red-600 transition-colors ease-in-out duration-500  text-white text-xl rounded-md "
+                className="px-5 py-4 text-xl text-white transition-colors duration-500 ease-in-out bg-red-500 rounded-md hover:bg-red-600 "
                 onClick={() => setShowForm(true)}
               >
                 Book a ticket
@@ -108,9 +108,9 @@ const MovieDetail = () => {
         </div>
       </div>
       {showForm && (
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-2xl w-1/2 h-2/3 rounded-md overflow-hidden">
+        <div className="absolute w-1/2 overflow-hidden -translate-x-1/2 -translate-y-1/2 rounded-md top-1/2 left-1/2 backdrop-blur-2xl h-2/3">
           <div className="p-4">
-            <h1 className="md:text-5xl text-2xl font-mono font-extrabold ">
+            <h1 className="font-mono text-2xl font-extrabold md:text-5xl ">
               {data.name}
             </h1>
             <div className="flex gap-4">
@@ -122,7 +122,7 @@ const MovieDetail = () => {
                 );
               })}
             </div>
-            <div className="font-mono mt-10 flex flex-col gap-2">
+            <div className="flex flex-col gap-2 mt-10 font-mono">
               <div>
                 <span> Rating</span>:{" "}
                 <span className="text-xl">{data.rating.average}</span>
@@ -146,7 +146,7 @@ const MovieDetail = () => {
             </div>
             <div className="mt-10">
               <button
-                className="px-5 py-4 bg-red-500 hover:bg-red-600 transition-colors ease-in-out duration-500  text-white text-xl rounded-md "
+                className="px-5 py-4 text-xl text-white transition-colors duration-500 ease-in-out bg-red-500 rounded-md hover:bg-red-600 "
                 onClick={() => setShowForm(false)}
               >
                 Make a payment
