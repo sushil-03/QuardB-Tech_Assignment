@@ -48,7 +48,7 @@ const MovieDetail = () => {
   return (
     <div className="min-h-screen overflow-hidden text-white bg-black">
       <div>
-        <div className="flex flex-col items-center justify-center h-screen gap-2 md:gap-20 sm:gap-12 sm:flex-row">
+        <div className="flex flex-col items-center justify-center min-h-screen gap-2 md:gap-20 sm:gap-12 sm:flex-row">
           <div className="w-11/12 mx-auto sm:w-1/2">
             <Link to={data.officialSite}>
               <img src={data.image.original} alt="" />
